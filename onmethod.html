@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur necessitatibus! Commodi dolor magni beatae et reiciendis maiores provident optio deleniti illo nam sapiente impedit quia laboriosam aperiam, saepe debitis.</p>
+
+
+    <script>
+
+$(document).ready(function(){
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "purple");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "red");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }  
+  });
+});
+ </script>
+</body>
+</html>

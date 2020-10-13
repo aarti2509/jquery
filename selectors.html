@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <p>aarti shivdas kale</p>
+    <p class="p">welcome to sqr infotech</p>
+    <span>Hello aarti</span>
+    <h1>Hello hello</h1>
+
+    <ul>
+        <li>
+            money
+        </li>
+        <li>paise</li>
+        <li>coffee</li>
+    </ul>
+
+    <a href="#" >Home</a>
+    <a href="#">Logout</a>
+    <a href="#" >Go Back page</a>
+    <a  target="_blank">move here</a>
+
+    <button id="btn1">click</button>
+    <button id="btn">click here</button>
+    <button class="btn3">
+        hide li
+    </button>
+    <button id="btn4" type="button">Ankar taghide</button>
+    <button id="btnblank">blank btn</button>
+
+
+    <h1>Welcome to My Web Page</h1>
+
+<table border="1">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+
+<p>List 1:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Milk</li>
+  <li>Tea</li>
+</ul>
+
+<p>List 2:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Milk</li>
+  <li>Tea</li>
+</ul>
+
+
+
+<button id="first-child">first-child</button>
+<button id="last-child">last-child</button>
+
+
+
+<script>
+    $(document).ready(function()
+    {// by using id selector
+        $("#btn1").click(function(){
+            $( '*').hide();
+           
+        });
+        //by class
+        $("#btn").click(function(){
+            $('p.p').hide();
+        });
+
+        $("h1").click(function(){
+            $(this).hide();
+        })
+
+        //p:first selector
+        $("p:first").click(function(){
+            $(this).hide();
+        })
+
+        $(".btn3").click(function(){
+            $("ul li:first").hide();
+        })
+
+        //by using attribute
+        $("#btn4").click(function(){
+            $("[href]").hide();
+        })
+
+        //by target value
+      /*  $('#btnblank').click(function(){
+            $("a[target='_blank']").hide();
+        });*/
+
+        $('#btnblank').click(function(){
+            $("a[target!='_blank']").hide();
+        });
+
+        $('#btn4').click(function(){
+            $(this).hide();
+        });
+
+
+        $('td:even').css("background-color","purple");
+
+       
+       //first_child
+       $("#first-child").click(function(){
+        $("ul li:first-child").css("color","red");
+       })
+       
+
+       $("#last-child").click(function(){
+           $("ul li:last-child").css("background-color","yellow");
+       })
+    });
+</script>
+</body>
+</html>
